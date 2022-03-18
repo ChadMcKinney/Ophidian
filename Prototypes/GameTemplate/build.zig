@@ -14,6 +14,7 @@ pub fn build(b: *std.build.Builder) void {
     const exe = b.addExecutable("GameTemplate", "src/main.zig");
     exe.setTarget(target);
     exe.setBuildMode(mode);
+    exe.addPackagePath("ophidian", "../../Engine/src/ophidian.zig");
     exe.install();
 
     const run_cmd = exe.run();

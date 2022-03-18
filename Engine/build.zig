@@ -5,7 +5,7 @@ pub fn build(b: *std.build.Builder) void {
     // between Debug, ReleaseSafe, ReleaseFast, and ReleaseSmall.
     const mode = b.standardReleaseOptions();
 
-    const lib = b.addStaticLibrary("Engine", "src/main.zig");
+    const lib = b.addStaticLibrary("Ophidian", "src/ophidian.zig");
     lib.setBuildMode(mode);
     lib.install();
 
